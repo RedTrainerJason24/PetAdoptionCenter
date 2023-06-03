@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact Us - AnimalShelter</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us</title>
+
+  {% load static %}
+    <link rel="stylesheet" href="{% static 'css/design.css' %}">
+
+
+
+  <style>
+ input[type=email], input[type=tel]
+{
+  width: 12%;
+  padding: 5px 5px;
+  margin: 5px 0;
+  border: 1px solid rgb(0, 0, 0);
+  box-sizing:border-box;
+}
+  </style>
+  
+</head>
+
+
+<body>
+
+
+    <div>
+         {% load static %}
+         <img src="{% static 'images/logo.png' %}" height="100" width="280"><h1>Harmonics Animal Shelter</h1>
+    </div>
+
+      <div class="topnav">
+        <a class="active" href="https://the-adoption-center.youknowhowtolov.repl.co/">Home</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/adoption">Adoption</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/login">Login</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/signup">Signup</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/contactus">Contact</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/favorites">Favorites</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/Employee">Employee</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/upload">Upload</a>
+        
+       </div>
+  
+
+  
+
+   <div>
+       <h1>Contact Us</h1>
+   </div>
+
+      
+   <p><b>For adoption inquiries, please select the animal:</b></p>
+   <form>
+    <input type="radio" id="dog" name="animal" value="Dog">
+    <label for="dog"><b>Dog</b></label>
+    <input type="radio" id="cat" name="animal" value="Cat">
+    <label for="cat"><b>Cat</b></label>
+    <input type="radio" id="smanimal" name="animal" value="Small Animal">
+    <label for="smanimal"><b>Small Animal</b></label>
+  </form>
+  
+  <br>
+  
+   <form action="/contactus" method="POST">
+     {% csrf_token %}
+    <label for="fname"><b>First Name:</b></label><br>
+    <input type="text" placeholder="Enter First Name"id="fname" name="fname" value="" required><br><br>
+    <label for="lname"><b>Last Name:</b></label><br>
+    <input type="text" placeholder="Enter Last Name"id="lname" name="lname" value="" required><br><br>
+    <label for="email"><b>E-Mail:</b></label><br>
+    <input type="email" placeholder="Enter E-Mail Address"id="email" name="email" value="" required><br><br>
+    <label for="phone"><b>Phone Number:</b></label><br>
+    <input type="tel" placeholder="123-456-7890"id="phone" name="phone" value="" maxlength="10" required><br><br>
+    <label for="message"><b>Message</b></label><br>
+    <textarea name="message" placeholder="Enter Message" rows="10" cols="100"></textarea><br>
+    <input type="submit" value="Submit">
+    <input type="reset">
+    
+  </form>
+  <br>
+  <br>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1650.3178235840587!2d-117.32266264177497!3d34.18123201404049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c3519b4f441ef9%3A0xa27bc985c0140b9a!2sJack%20H.%20Brown%20Hall%2C%205500%20University%20Pkwy%2C%20San%20Bernardino%2C%20CA%2092407!5e0!3m2!1sen!2sus!4v1662345172920!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+  <br>
+  <br>
+  <br>
+
+
+
+
+
+   
+</body>
+
+
+
+
+<footer>
+   <p>Email us at <a href="mailto:harmonicsstudios@outlook.com">harmonicsstudios@outlook.com</a><br>
+   Call us at <a href="tel:4436264625">(443)-6-ANIMAL</a>(443-626-4625)<br>
+   Located at <a href="https://maps.google.com/?ll=34.18125953107612, -117.32176563594709" target="_blank">5500 University Pkwy. #JBL254, San Bernardino, CA 92407</a><br>
+</footer>
+
+
+
+</html>

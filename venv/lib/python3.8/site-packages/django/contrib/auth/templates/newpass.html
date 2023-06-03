@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+  
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+
+</head>
+
+
+  
+<body>
+
+  {% include '/home/runner/The-Adoption-Center/venv/lib/python3.8/site-packages/django/contrib/admin/templates/navbar.html' %}
+
+<div class="contain">
+ 
+  <div class="inner-warpper text-center">
+    
+
+       <h1>Please input your New Password</h1>
+
+
+    
+       <form action="/newpass" method="POST">
+
+      {% csrf_token %}
+        
+          <div class ="user_newpass">
+
+          <label for="usernewpass"><b>New Password:</b></label>
+      
+          <center><input id="usernewpass" name="usernewpass" type="text" autofocus required></center>
+      
+            
+          <br>
+      
+            <label for=""><b>Confirm Password:</b></label>
+      
+             <center><input id="" name="" type="text"  autofocus required></center>
+      
+          </div>
+          
+
+       <br>
+       <br>
+
+
+       <button type="submit" value="Submit" ><b>Submit</b></button>
+     
+       
+    </div>
+    
+  </form>
+
+  
+       <div id = "topRightFixed">
+        {% if user.is_authenticated %}
+        
+         <p>Welcome, <b>{{user.username}}</b></p>
+        
+         {% endif %}
+         
+       </div>
+ 
+</body>
+
+</html>

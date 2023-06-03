@@ -1,0 +1,215 @@
+body
+{
+    background-image: url('https://static.wixstatic.com/media/11062b_4b7c9a8e48334d5aad2fd274fddba3bc~mv2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+h1
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: rgb(13, 14, 14);
+    text-align: center;
+    background-image: url("");
+}
+
+
+h2
+{
+  font-size: 30px;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav 
+{
+  background-color: rgb(40, 34, 129);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover 
+{
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active 
+{
+  background-color: #04AA6D;
+  color: white;
+}
+
+button 
+{
+  cursor: pointer;
+  background: green;
+  width: 100%;
+  border: 0;
+  padding: 10px 15px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+
+.container
+ {
+  margin: 10px;
+  width: 320px;
+  background: #fff;
+  margin: 20px auto;
+  min-height: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 6px #090b6f85;
+  margin: 110px auto;
+
+}
+
+
+.contain
+ {
+  margin: 10px;
+  width: 550px;
+  background: #fff;
+  margin: 20px auto;
+  min-height: 200px;
+  border: 1px solid #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 6px #090b6f85;
+  margin: 100px auto;
+
+}
+
+.contain .inner-warpper 
+{
+  padding: 50px 30px 60px;
+
+}
+
+
+
+.contain .supporter 
+{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8E8E8E;
+  cursor: pointer;
+}
+
+   
+.container .inner-warpper 
+{
+  padding: 50px 30px 60px;
+
+}
+
+
+
+.container .supporter 
+{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8E8E8E;
+  cursor: pointer;
+}
+
+
+input[type=text], input[type=password],input[type=email], input[type=tel]
+{
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  z-index: 3;
+  border: 1px solid #d9d9d9;
+  padding: 10px 10px;
+  background: #ffffff;
+  box-sizing: border-box;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#topRightFixed    
+{
+      position: fixed;
+      top: 0;
+      right: 0;
+}
+
+  
+
+/* Create three equal columns that floats next to each other */
+.column 
+{
+
+  float: center;
+  text-align: center;
+  width: 33.33%;
+}
+
+
+
+.text-center 
+{
+  text-align: center;
+}
+
+
+a 
+{
+  color: #000000;
+  
+}
+
+
+    #topRightFixed 
+     
+     {
+      position: fixed;
+      top: 0;
+      right: 0;
+}
+
+  
+  h3
+  {
+    text-align:center
+  }
+   
+     
+     
+    h2
+  {
+     font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+     font-size: 20px;
+     text-align: center;
+  }
+
+
+/* Create three equal columns that floats next to each other */
+.column 
+{
+  float: center;
+  text-align: center;
+  width: 33.33%;
+}
+

@@ -1,0 +1,54 @@
+body
+{
+    background-color: rgb(79, 151, 131);
+}
+
+
+h1
+{
+    text-align: center;
+}
+
+#li1, #li2, #li3, #li4, #li5 
+{
+
+  display: inline;
+  margin-left: 1.7em
+   
+}
+
+p
+{
+    text-align: center;
+    font-size:20px;
+}
+
+h2
+{
+  font-size:30px;
+}
+
+form label
+{
+    
+display:block; 
+
+width: x;
+
+height:y;
+
+text-align: center;
+    
+margin: auto;
+
+}
+
+li 
+{
+    font-size: 25px;
+}
+
+li span 
+{
+    font-size: 30px;
+}

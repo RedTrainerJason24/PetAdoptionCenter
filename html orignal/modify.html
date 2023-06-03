@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Upload</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us</title>
+
+  {% load static %}
+    <link rel="stylesheet" href="{% static 'css/design.css' %}">
+</head>
+
+
+<body>
+
+     <div>
+        <h1>Harmonics Animal Shelter</h1>
+    </div>
+
+      <div class="topnav">
+        <a class="active" href="https://the-adoption-center.youknowhowtolov.repl.co/">Home</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/adoption">Adoption</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/login">Login</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/signup">Signup</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/contactus">Contact</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/favorites">Favorites</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/Employee">Employee</a>
+        <a href="https://The-Adoption-Center.youknowhowtolov.repl.co/upload">Upload</a>
+        
+       </div>
+  
+      <br>
+     <form action="/action_page.php">
+      <label for="name"> Name:</label><br>
+      <input type="text" placeholder="Enter Name"id="name" name="name" value="" required><br><br>
+      <label for="age">Age:</label><br>
+      <input type="text" placeholder="Enter Age"id="age" name="age" value="" required><br><br>
+      <label for="breed">Breed:</label><br>
+      <input type="text" placeholder="Enter Breed"id="breed" name="breed" value="" required><br><br>
+      <label for="gender">Gender:</label><br>
+      <input type="text" placeholder="Enter Gender"id="gender" name="gender" value="" maxlength="10" required>         <br><br>
+      <label for="desc1"> Description #1:</label><br>
+      <input type="text" placeholder="Enter  Description"id="desc1" name="desc1" value="" required><br><br>
+
+       <label for="desc2"> Description #2:</label><br>
+      <input type="text" placeholder="Enter  Description"id="desc2" name="desc2" value="" required><br><br>
+
+       <label for="desc3"> Description #3:</label><br>
+      <input type="text" placeholder="Enter  Description"id="desc3" name="desc3" value="" required><br><br>
+
+
+       <p>Click on the "Choose File" button to upload a file:</p>
+      
+       <center><input type="file" id="myFile" name="filename"></center>
+      
+
+
+        <br><br>
+      
+      <input type="submit" value="Submit">
+       
+    
+  </form>
+
+  
+</body>
+
+
+</html>

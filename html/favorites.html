@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Favorites</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/nicepage.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'css/adopt.css' %}" media="screen">
+    <script>
+      var animalObject = {
+        "Cat": {
+          "Abyssinian": ["Kitten", "Prime", "Mature", "Senior"],
+          "American Shorthair": ["Kitten", "Prime", "Mature", "Senior", "Float"],
+          "Birman": ["Kitten", "Prime", "Mature", "Senior"],
+          "British Shorthair": ["Kitten", "Prime", "Mature", "Senior"],
+          "Cornish Rex": ["Kitten", "Prime", "Mature", "Senior"],
+          "Devon Rex": ["Kitten", "Prime", "Mature", "Senior"],
+          "Exotic Shorthair": ["Kitten", "Prime", "Mature", "Senior"],
+          "Maine Coon": ["Kitten", "Prime", "Mature", "Senior"],
+          "Norwegian Forest": ["Kitten", "Prime", "Mature", "Senior"],
+          "Oriental": ["Kitten", "Prime", "Mature", "Senior"],
+          "Persian": ["Kitten", "Prime", "Mature", "Senior"],
+          "Ragdoll": ["Kitten", "Prime", "Mature", "Senior"],
+          "Scottish Fold": ["Kitten", "Prime", "Mature", "Senior"],
+          "Siamese": ["Kitten", "Prime", "Mature", "Senior"],
+          "Sphynx": ["Kitten", "Prime", "Mature", "Senior"]    
+        },
+        "Dog": {
+          "Australian Shepherd": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Beagle": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Boxer": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Bulldog": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Corgi": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Dachshund": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "French Bulldog": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "German Short-Haired Pointer": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "German Shepherd": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Golden Retriever": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Great Dane": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Labrador Retriever": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Poodle": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Rottweiler": ["Puppy", "Adolescent", "Adult", "Senior"],
+          "Yorkshire Terrier": ["Puppy", "Adolescent", "Adult", "Senior"]
+        }
+      }
+      window.onload = function() {
+        var animalSel = document.getElementById("animal");
+        var breedSel = document.getElementById("breed");
+        var ageSel = document.getElementById("age");
+        for (var x in animalObject) {
+          animalSel.options[animalSel.options.length] = new Option(x, x);
+        }
+        animalSel.onchange = function() {
+          //empty Chapters- and Topics- dropdowns
+          ageSel.length = 1;
+          breedSel.length = 1;
+          //display correct values
+          for (var y in animalObject[this.value]) {
+            breedSel.options[breedSel.options.length] = new Option(y, y);
+          }
+        }
+        breedSel.onchange = function() {
+          //empty Chapters dropdown
+          ageSel.length = 1;
+          //display correct values
+          var z = animalObject[animalSel.value][this.value];
+          for (var i = 0; i < z.length; i++) {
+            ageSel.options[ageSel.options.length] = new Option(z[i], z[i]);
+          }
+        }
+      }
+      </script>
+  
+    <script class="u-script" type="text/javascript" src="{% static 'js/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/nicepage.js' %}" defer=""></script>
+    <meta name="generator" content="Nicepage 4.20.1, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Site1",
+		"logo": "images/logo.png"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Adopt">
+    <meta property="og:type" content="website">
+
+
+    <style>
+
+      button 
+      {
+        cursor: pointer;
+        background: green;
+        width: 100%;
+        border: 0;
+        padding: 10px 15px;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        -webkit-transition: 0.3s linear;
+        transition: 0.3s linear;
+      }
+      
+      
+      .container
+       {
+        margin: 10px;
+        width: 320px;
+        background: #fff;
+        margin: 20px auto;
+        min-height: 200px;
+        border: 1px solid #f3f3f3;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 6px #090b6f85;
+        margin: 110px auto;
+      
+      }
+      
+      
+      .contain
+       {
+        margin: 10px;
+        width: 550px;
+        background: #fff;
+        margin: 20px auto;
+        min-height: 200px;
+        border: 1px solid #f3f3f3;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 6px #090b6f85;
+        margin: 100px auto;
+      
+      }
+      
+      .contain .inner-warpper 
+      {
+        padding: 50px 30px 60px;
+      
+      }
+      
+      
+      
+      .contain .supporter 
+      {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #8E8E8E;
+        cursor: pointer;
+      }
+      
+         
+      .container .inner-warpper 
+      {
+        padding: 50px 30px 60px;
+      
+      }
+      
+      
+      
+      .container .supporter 
+      {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #8E8E8E;
+        cursor: pointer;
+      }
+      
+      
+      input[type=text], input[type=password],input[type=email], input[type=tel]
+      {
+        outline: none;
+        display: block;
+        width: 100%;
+        height: 40px;
+        position: relative;
+        z-index: 3;
+        border: 1px solid #d9d9d9;
+        padding: 10px 10px;
+        background: #ffffff;
+        box-sizing: border-box;
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+        position: relative;
+        margin-bottom: 20px;
+      }
+
+
+label 
+{
+  font-size: 48px
+}
+
+label input[type="checkbox"] 
+{
+  display: none;
+}
+
+.custom-checkbox 
+{
+  margin-left: 1.1em;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox .glyphicon 
+{
+  color: red;
+  position: absolute;
+  top: 0.4em;
+  left: -1.25em;
+  font-size: 0.75em;
+}
+
+.custom-checkbox .glyphicon-star-empty 
+{
+  color: gray;
+}
+
+.custom-checkbox .glyphicon-star 
+{
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover .glyphicon-star
+{
+  opacity: 0.5;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star 
+{
+  opacity: 1;
+} 
+
+ ul {
+      display: table;
+      margin: 0 auto;
+    }
+          
+ul > li 
+    {
+       display: inline-block;
+       float: none;
+       /* You can also add some margins here to make it look prettier */
+       padding-right: 50px;
+       text-align: center;
+    }
+
+img.rounded 
+    {
+      border-radius: 10%;
+    }
+
+
+        
+#topRightFixed    
+{
+      position: absolute;
+      top: 0;
+      right: 0;
+}
+      </style>
+  
+  </head>
+  
+  <body class="u-body u-xl-mode" data-lang="en"><header class="u-clearfix u-header" id="sec-2a67"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://the-adoption-center.youknowhowtolov.repl.co/" class="u-image u-logo u-image-1" data-image-width="516" data-image-height="265">
+          <img src="{% static 'images/logo.png' %}" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700; text-transform: uppercase;">
+            <a class="u-button-style u-custom-active-border-color u-custom-active-color u-custom-border u-custom-border-color u-custom-borders u-custom-hover-border-color u-custom-hover-color u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+             <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-spacing-30 u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 0px;" href="https://the-adoption-center.youknowhowtolov.repl.co/" >Home</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 0px;" href="adoption">Adopt</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" style="padding: 10px 0px;" href="login">Login</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="contactus" style="padding: 10px 0px;">Contact</a>
+{% if user.is_authenticated %}</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="favorites" style="padding: 10px 0px;">Favorites</a>{% endif %}
+{% if user.is_staff %}</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="Employee" style="padding: 10px 0px;">Employee</a>{% endif %}
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="https://the-adoption-center.youknowhowtolov.repl.co/">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="adoption">Adopt</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="login">Login</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="contactus">Contact</a>
+
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="favorites" style="padding: 10px 0px;">Favorites</a>
+</li><li class="u-nav-item"><a class="u-border-2 u-border-active-palette-1-base u-border-hover-palette-1-light-1 u-border-no-left u-border-no-right u-border-no-top u-button-style u-nav-link u-text-active-grey-90 u-text-grey-90 u-text-hover-grey-90" href="https://The-Adoption-Center.youknowhowtolov.repl.co/admin/" style="padding: 10px 0px;">Employee</a>
+</li></ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+      <section class="u-clearfix u-image u-section-1" id="sec-bfb9" data-image-width="1280" data-image-height="809">
+        <div class="u-clearfix u-sheet u-sheet-1">
+   
+<body>
+
+  <div class = "center">
+<section class="u-clearfix u-section-2" id="sec-8ada">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-custom-font u-font-georgia u-subtitle u-text u-text-body-color u-text-default u-text-1 animated customAnimationIn-played" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-direction="X" style="will-change: transform, opacity; animation-duration: 1000ms;">
+          <span style="font-weight: 400;">Favorite&nbsp;</span>
+          <span style="font-weight: 700;">pets</span>
+        </h2>
+        
+<center>
+  <ul class="nav">
+{% for pet in data %}
+      <li class="nav-item">
+      <a class="nav-link" href="https://the-adoption-center.youknowhowtolov.repl.co/{{pet.name}}">{% load static %}
+      <img src="{{ pet.image.url }} " width=150 height=150 class="rounded">
+      <p>{{ pet.name }}</p>
+      </a>
+      </li>
+{% endfor %}
+</ul>
+</center>
+    </div>
+
+  </section>
+    </div>
+     
+
+
+<!--    <button type="button" onclick="alert('The selected animal(s) have been removed from your Favorites.')">Remove From Favorites</button> -->
+   
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+
+
+   </section>
+      
+    
+  <div id = "topRightFixed">
+  {% if user.is_authenticated %}
+        
+  <p>Welcome, <b>{{user.username}}</b></p>
+        
+  {% endif %}
+         
+  </div>
+
+    <footer class="u-align-center u-clearfix u-footer u-white u-footer" id="sec-0500"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1"><span class="u-file-icon u-icon u-text-black u-icon-1"><img src="images/104663-6efc10ab.png" alt=""></span>&nbsp;2022, Harmonics Studios
+        </p>
+      </div></footer>
+
+      
+</body></html>

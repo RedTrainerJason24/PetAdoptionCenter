@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}"> 
+</head>
+
+  
+<body>
+  
+  {% include '/home/runner/The-Adoption-Center/venv/lib/python3.8/site-packages/django/contrib/admin/templates/navbar.html' %}
+
+
+
+<div class="container">
+ 
+  <div class="inner-warpper text-center">
+    
+    <h2> Login </h2>
+    
+    <form action="/login" method="POST">
+
+      {% csrf_token %}
+
+     
+        <div class="user_name">
+      
+        <label for="username"><b>Username:</b></label>
+
+        <center><input id="username" name="username" type="text" required minlength="2" maxlength="10" autocomplete="off" autofocus required></center>
+
+        </div>
+
+     
+        <div class="pass_word">
+      
+        <label for="password"><b>Password:</b></label>
+
+        <center><input id="password" name="password" type="password"  required minlength="2" maxlength="20" autocomplete="off" required></center>
+    
+        </div>
+
+
+         <button type="submit" id="login">Login</button>
+
+         {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+      
+            <br>
+            <br>
+            <br>
+
+  
+         <a href="https://the-adoption-center.youknowhowtolov.repl.co/reset">Forgot Password?</a>
+
+          <br>
+          <br>
+         <center><a href="https://The-Adoption-Center.youknowhowtolov.repl.co/signup">Create Account</a></center>
+
+    </div>
+    
+  </form>
+  
+
+</body>
+
+</html>

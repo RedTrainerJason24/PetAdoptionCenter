@@ -1,0 +1,77 @@
+body
+{
+    background-image: url('https://static.wixstatic.com/media/11062b_4b7c9a8e48334d5aad2fd274fddba3bc~mv2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+h1
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: rgb(13, 14, 14);
+    text-align: center;
+    background-image: url("");
+}
+
+
+h2
+{
+  font-size: 30px;
+}
+
+/* Add a black background color to the top navigation */
+.topnav 
+{
+  background-color: rgb(40, 34, 129);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 19px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover 
+{
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active 
+{
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+input[type=text], input[type=password]
+{
+  width: 12%;
+  padding: 5px 5px;
+  margin: 5px 0;
+  border: 1px solid rgb(0, 0, 0);
+  box-sizing:border-box;
+
+}
+
+.pets 
+{
+  display: flex;
+}
+
+.detail {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+

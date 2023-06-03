@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+  
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/design.css' %}">
+
+<style>
+    body 
+    {
+       background-image: url('https://static.wixstatic.com/media/11062b_4b7c9a8e48334d5aad2fd274fddba3bc~mv2.jpg');
+      
+    }
+    
+    h1 
+    {
+      text-align: center;
+    }
+
+
+    p 
+    {
+      text-align: center;
+    }
+
+    form label 
+    {
+      display:block; 
+      width: x;
+      height:y;
+      text-align: center;
+    }
+
+   ul
+   {
+    list-style-type: none;
+    background-color: blue;
+    font-size: 18px;
+    text-align: center;
+   }
+  
+  
+   li 
+   {
+
+    display: inline;
+   
+   }
+
+
+   li a 
+   {
+   
+   color: white;
+   text-align: center;
+   padding: 100px;
+   text-decoration: none;
+  
+   }
+
+    ul
+    {
+    text-align: top;
+    }
+
+
+    h1
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    color: rgb(13, 14, 14);
+    text-align: center;
+    background-image: url("");
+}
+
+p
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: rgb(13, 14, 14);
+    text-align: center;
+
+}
+   </style>
+</head>
+
+    <body>
+
+<div>
+           <h1>Harmonics Animal Shelter</h1>
+       </div>
+   
+       <ul>
+         <li><a href="https://the-adoption-center.youknowhowtolov.repl.co/">Home</a></li>
+         <li><a href="https://The-Adoption-Center.youknowhowtolov.repl.co/adoption">Adoption</a></li>
+         <li><a href="https://The-Adoption-Center.youknowhowtolov.repl.co/login">Login</a></li>
+         <li><a href="https://The-Adoption-Center.youknowhowtolov.repl.co/signup">Signup</a></li>
+         <li><a href="https://The-Adoption-Center.youknowhowtolov.repl.co/contactus">Contact</a></li>
+         <li><a href="favorites">Favorites</a></li>
+       </ul>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+	  <h1>Sign Up</h1>
+      
+      <p>Create an account:</p>
+    
+      <form action="/signup" method="POST">
+
+      {% csrf_token %}
+
+      <section id="user-name">
+      
+      <label for="username">Username:</label>
+      
+      <br>		
+	  
+      <center><input id="username" name="username" type="text" required minlength="4" maxlength="10" autofocus></center>
+
+      </section> 
+
+
+      
+      <br>
+
+
+      <section id="pass_word">
+
+      <label for="pw">Password:</label>
+      
+      <br>
+	  
+      <center><input id="pw" name="pw" type="password" required minlength="4" maxlength="10"></center>
+
+      </section>
+      
+
+
+      <br>
+
+
+      <section id="submission">
+      
+      <center><input type="submit" value="Submit"></center>
+
+      </section>
+
+
+      </form>
+
+    </body>
+</html>
+
+
+
+

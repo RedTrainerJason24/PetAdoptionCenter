@@ -1,0 +1,105 @@
+<html>
+<head>
+  <title>Vladimir's Info Page</title>
+  <link href="style.css" type="text/css" rel="stylesheet"/>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/design.css' %}">
+    <style>
+      .button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttonmodify {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.buttonmodify:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+body {
+  background-image: url('https://static.wixstatic.com/media/11062b_4b7c9a8e48334d5aad2fd274fddba3bc~mv2.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+  
+ {% include '/home/runner/The-Adoption-Center/venv/lib/python3.8/site-packages/django/contrib/admin/templates/navbar.html' %}
+
+    <img src="https://i2-prod.dailystar.co.uk/incoming/article26484648.ece/ALTERNATES/s810/0_Dog-who-looks-exactly-like-Vladimir-Putin-sends-social-media-into-hysterics.jpg" width="550" height="450"/>
+
+  <br>
+  <br>
+  
+    <h3>
+    Vladimir
+    </h3>
+
+    <button class="button buttonmodify">Modify</button>
+    <button class="button buttonfavorites">Favorites</button>
+  
+<center>
+  <h1>
+  Vladimir's Story:
+  </h1>
+    <p>Don't challenge him, or he'll get the Kremlin to take you out.</p>
+</center>
+
+  <hr>
+
+<center>
+  <h2>Name: Vladimir</h2>
+
+  <h2>Age: 69 months (nice)</h2>
+
+  <h2>Breed: Russian Nohair</h2>
+
+  <h2>Gender: male</h2>
+
+    <hr>
+
+</center>
+
+<center>
+  <h2>
+    !!!What makes him so special!!!
+  </h2>
+</center>
+
+<center>
+  <li>He is territorial and likes to invade any place that he deems to be a threat. <br></li>
+  <li>As long as you keep him on a leash, he will be loyal to you.<br></li>
+  <li>Likes long walks in Ukraine, does not like the name Zelensky<br></li>
+</center>
+  <br>
+  <br>
+  <br>
+
+
+</body>
+
+<br><br>
+
+        <p style="position: fixed; bottom 0; width: 100%; text-align: center">Email us at <a href="mailto:HarmoniczStudios@gmail.com">HarmoniczStudios@gmail.com</a><br>
+          Call us at <a href="tel:4436264625">(443)-6-ANIMAL</a>(443-626-4625)<br>
+          Located at <a href="https://maps.google.com/?ll=34.18125953107612, -117.32176563594709" target="_blank">5500 University Pkwy. #JBL254, San Bernardino, CA 92407</a><br></p> 
+</html>
